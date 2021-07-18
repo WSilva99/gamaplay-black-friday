@@ -21,12 +21,13 @@
 body {
   background-color: var(--blue-night);
   background-image: url("./assets/far-background.png");
-  background-size: cover;
+  background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center top;
   color: var(--white);
   font-family: var(--default-font-family);
+  width: 100%;
 }
 
 header {
@@ -194,4 +195,24 @@ input[type="button"]:active {
 section {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 480px) {
+  #timer {
+    flex-direction: column;
+  }
+  #form-subscribe {
+    flex-direction: column;
+    width: 80vw;
+  }
+  input[type="email"], input[type="button"] {
+    width: 100%;
+    margin-bottom: 16px;
+  }
 }
